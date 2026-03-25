@@ -9,10 +9,10 @@ function setCorsHeaders(res) {
 }
 
 export default async function handler(req, res) {
-  // 1. Attach headers
+
   setCorsHeaders(res);
 
-  // 2. Handle the preflight safety check
+
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
